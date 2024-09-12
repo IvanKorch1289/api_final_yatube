@@ -6,6 +6,6 @@ class IsAuthor(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
         super().has_object_permission(request, view, obj)
         return (
-            obj.author == request.user 
+            obj.author == request.user
             or request.method in permissions.SAFE_METHODS
         )

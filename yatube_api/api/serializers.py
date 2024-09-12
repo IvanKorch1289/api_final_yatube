@@ -34,7 +34,8 @@ class CommentSerializer(serializers.ModelSerializer):
     """Сериализатор объектов комментариев."""
 
     author = serializers.SlugRelatedField(
-        read_only=True,slug_field='username'
+        read_only=True,
+        slug_field='username'
     )
 
     class Meta:
